@@ -7,6 +7,10 @@ By default it will download / stream the complete show but it will also handle s
 The tool currently supports: YouTube, SVT Öppet Arkiv
 
 
-The projectis still in early development so expect bugs. 
+The project is still in early development so expect bugs. 
 If you find any bug please report it together with the link you tried to download at the issue tracker 
 https://github.com/Kakadua/Kakadua-Emby-Media-Tool/issues
+
+
+The project requires the JSON.net framework.
+http://www.newtonsoft.com/json
