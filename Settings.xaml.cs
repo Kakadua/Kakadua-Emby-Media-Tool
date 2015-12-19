@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace KEMT
 {
@@ -22,7 +12,7 @@ namespace KEMT
         public Settings()
         {
             InitializeComponent();
-            if (System.IO.File.ReadAllText("API_KEY") != null && System.IO.File.ReadAllText("API_KEY") != "") { tb_yt_key.Text = System.IO.File.ReadAllText("API_KEY"); }
+            try { if (System.IO.File.ReadAllText("API_KEY") != null && System.IO.File.ReadAllText("API_KEY") != "") { tb_yt_key.Text = System.IO.File.ReadAllText("API_KEY"); } } catch(Exception e) {}
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)

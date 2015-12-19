@@ -18,8 +18,17 @@ namespace KEMT
             this.mw = mainWindow;
         }
 
-        public void generate(string type, string url)
+        public Boolean generate(string type, string url)
         {
+            if(type == "strm")
+            {
+                switch (MessageBox.Show("Keep in mind that videos is only availiable on TV4 Play for a limited time. After this your strm files will stop working. Are you sure you want to generate them instead of downloading the videos?", mw.Title, MessageBoxButton.YesNo, MessageBoxImage.Question))
+                { //Ask if explorer should be opened
+                    case MessageBoxResult.No:
+                        return true;
+                }
+            }
+
             mw.c_println("Getting the nid of the show...");
             string raw = KakaduaUtil.file_get_contents_utf8(url);
             string title = KakaduaUtil.get_between(raw, "data-nid=\"", "\"");
@@ -75,6 +84,7 @@ namespace KEMT
                     Process.Start("explorer.exe", "files\\");
                     break;
             }
+            return true;
         }
 
         public void ffmpeg_dl(String filename, String m3u8, String title)
