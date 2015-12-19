@@ -1,0 +1,48 @@
+﻿<Window x:Class="KEMT.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KEMT"
+        mc:Ignorable="d"
+        Title="KEMT - Kakadua Emby Media Tool - BETA1" Height="370" Width="525">
+    <Grid Background="#FFEEEEEE">
+
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Settings" Click="open_settings"/>
+                    <MenuItem Header="_Close" Click="close"/>
+                </MenuItem>
+                <MenuItem Header="_About" Click="open_about"/>
+            </Menu>
+            <StackPanel></StackPanel>
+        </DockPanel>
+
+        <!-- URL Bar -->
+        <TextBox x:Name="tb_url" HorizontalAlignment="Left" Height="23" Margin="10,24,0,0" TextWrapping="Wrap" Text="Show / Video URL" VerticalAlignment="Top" Width="485" MouseDoubleClick="SelectAddress" GotKeyboardFocus="SelectAddress" PreviewMouseLeftButtonDown="SelectivelyIgnoreMouseButton"/>
+
+        <!-- Controls START -->
+        <CheckBox x:Name="checkBox" Content="Overwrite old files" HorizontalAlignment="Left" Margin="14,54,0,0" VerticalAlignment="Top" IsEnabled="False" IsChecked="True"/>
+        <CheckBox x:Name="checkBox1" Content="Single episode" HorizontalAlignment="Left" Margin="138,54,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Button x:Name="btn_dl" Content="Download" HorizontalAlignment="Left" Margin="413,52,0,0" VerticalAlignment="Top" Width="75" Click="click_dl"/>
+        <Button x:Name="btn_strm" Content="Generate strm" HorizontalAlignment="Left" Margin="316,52,0,0" VerticalAlignment="Top" Width="90" Click="click_strm" />
+        <!-- Controls STOP -->
+
+        <!-- Console -->
+        <TextBox x:Name="tb_console" HorizontalAlignment="Left" Height="229" Margin="10,77,0,0" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="485" Background="Black" Foreground="Lime" IsManipulationEnabled="True"/>
+
+        <!-- Open Source Message -->
+        <TextBlock HorizontalAlignment="Left" Margin="10,308,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF777777">
+                  <Run Text="Open Source under the"/>
+                  <Hyperlink Click="web_licence">
+                    <Run Text="MIT Licence" Foreground="#FF777777" FontWeight="Bold" TextDecorations="Underline"/>
+                  </Hyperlink>
+                  <Run Text="Get it at"/>
+                  <Hyperlink Click="web_github">
+                    <Run Text="GitHub" Foreground="#FF777777" FontWeight="Bold" TextDecorations="Underline"/>
+                  </Hyperlink>
+        </TextBlock>
+
+    </Grid>
+</Window>
