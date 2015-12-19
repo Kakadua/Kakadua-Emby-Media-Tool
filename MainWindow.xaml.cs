@@ -129,6 +129,11 @@ namespace KEMT
                 }
                 else { c_println(no_key);  }
             }//YouTube END
+            else if (url.Contains("tv4play.se"))//TV4 Play
+            {
+                ServiceTV4 tv4 = new ServiceTV4(this);
+                tv4.generate("dl", url);
+            }//TV4 Play END
             else
             {
                 c_println("Usupported URL / Service");
@@ -157,6 +162,11 @@ namespace KEMT
                 }
                 else { c_println(no_key); }
             }//YouTube END
+            else if (url.Contains("tv4play.se"))//TV4 Play
+            {
+                ServiceTV4 tv4 = new ServiceTV4(this);
+                tv4.generate("strm", url);
+            }//TV4 Play END
             else
             {
                 c_println("Usupported URL / Service");

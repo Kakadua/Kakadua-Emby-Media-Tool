@@ -10,6 +10,7 @@
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Supported Services" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="15,33,0,0" TextWrapping="Wrap" Text="YouTube (WIP, expect bugs and crashes)" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="15,50,0,0" TextWrapping="Wrap" Text="SVT Öppet Arkiv (WIP, expect bugs and crashes)" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Margin="15,67,0,0" TextWrapping="Wrap" Text="TV4 Play (WIP, expect bugs and crashes)" VerticalAlignment="Top"/>
         <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="10,240,0,0" TextWrapping="Wrap" Text="Developed by Patrik &quot;Popeen&quot; Johansson" VerticalAlignment="Top" Foreground="#FF777777"/>
 
     </Grid>

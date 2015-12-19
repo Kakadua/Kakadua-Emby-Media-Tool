@@ -95,6 +95,7 @@
       <DependentUpon>About.xaml</DependentUpon>
     </Compile>
     <Compile Include="ServiceOppetArkiv.cs" />
+    <Compile Include="ServiceTV4.cs" />
     <Compile Include="ServiceYouTube.cs" />
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
